@@ -21,6 +21,13 @@ class _QuizScreenState extends State<QuizScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            widget.categoryModel.name,
+            style: TextStyle(color: ColorConstants.primaryWhite),
+          ),
+        ),
         backgroundColor: ColorConstants.primaryBlack,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 30),

@@ -29,8 +29,11 @@ class TotalPercentageScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+
             Text(
-              "Congrats!",
+              
+              messageShow(percentage)
+              ,
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
@@ -149,30 +152,21 @@ class TotalPercentageScreen extends StatelessWidget {
   }
 }
 
+String messageShow(double percentage) {
 
-// Center(
-//             child: Column(
-//           children: [
-//             Text(
-//               "Your Score is ${percentage.round()} %",
-//               style:
-//                   TextStyle(color: ColorConstants.primaryWhite, fontSize: 20),
-//             ),
-//             Text(
-//               "WRONG aNS ${wrongAnsCount.round()} %",
-//               style:
-//                   TextStyle(color: ColorConstants.primaryWhite, fontSize: 20),
-//             ),
-//             Text(
-//               "Crct Ans ${rightAnsCount.round()} %",
-//               style:
-//                   TextStyle(color: ColorConstants.primaryWhite, fontSize: 20),
-//             ),
-//             Text(
-//               "skip qs ${totalCount - rightAnsCount - wrongAnsCount} %",
-//               style:
-//                   TextStyle(color: ColorConstants.primaryWhite, fontSize: 20),
-//             ),
-//           ],
-//         )),
+  if(percentage>90){
+
+
+    return "Very Good"; 
+  }else if(percentage>40&&percentage<=90){
+
+    return "Good";
+
+  }else if(percentage<=40){
+    return "Oops";
+  }
+  return "";
+
+}
+
 
