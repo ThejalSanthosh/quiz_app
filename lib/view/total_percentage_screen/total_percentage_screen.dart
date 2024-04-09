@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:quiz_app/model/category_model/category_model.dart';
-import 'package:quiz_app/view/home_screen/home_screen.dart';
 import 'package:quiz_app/view/quiz_screen/quiz_screen.dart';
 
 class TotalPercentageScreen extends StatelessWidget {

@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
                   CircleAvatar(
                     radius: 26,
                     child: Image.network(
-                        "https://scontent-maa2-1.cdninstagram.com/v/t51.2885-19/395308835_3463668007277756_5707619813024977731_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-maa2-1.cdninstagram.com&_nc_cat=108&_nc_ohc=SztOVoOQ47oAX9cuMkB&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfCcOK739EfjyupyRXC_xMnZza8Os6-1g9tJT9VoJsMKrw&oe=66015A42&_nc_sid=8b3546"),
+                        "https://instagram.fcok4-1.fna.fbcdn.net/v/t51.2885-19/395308835_3463668007277756_5707619813024977731_n.jpg?stp=dst-jpg_s320x320&_nc_ht=instagram.fcok4-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=E_xG2ZRp8uIAb6APSIP&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfAGyqjDq86z0sbc85oZ46ntZhS_WDuno7JpnY9lipbxuw&oe=661B0F82&_nc_sid=8b3546"),
                   )
                 ],
               ),
@@ -106,11 +106,14 @@ class HomeScreen extends StatelessWidget {
                         CategoryController.lstCategoryController[index];
                     return InkWell(
                       onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder:(context) => QuizScreen(categoryModel: categoryModel),));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  QuizScreen(categoryModel: categoryModel),
+                            ));
                       },
-                      child: CustomGridView(
-                          categoryModel:
-                              categoryModel),
+                      child: CustomGridView(categoryModel: categoryModel),
                     );
                   },
                 ),
